@@ -1,0 +1,16 @@
+# The RIGHT JOIN keyword returns all rows from the right table (table2), with the matching rows in the left table (table1). The result is NULL in the left side when there is no match.
+# SQL RIGHT JOIN Syntax
+
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name=table2.column_name;
+
+OR
+
+SELECT column_name(s)
+FROM table1
+RIGHT OUTER JOIN table2
+ON table1.column_name=table2.column_name;
+
+# In some databases RIGHT JOIN is called RIGHT OUTER JOIN.
