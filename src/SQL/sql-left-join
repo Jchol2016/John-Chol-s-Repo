@@ -1,0 +1,16 @@
+# The LEFT JOIN keyword returns all rows from the left table (table1), with the matching rows in the right table (table2). The result is NULL in the right side when there is no match.
+# SQL LEFT JOIN Syntax
+
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name=table2.column_name;
+
+OR
+
+SELECT column_name(s)
+FROM table1
+LEFT OUTER JOIN table2
+ON table1.column_name=table2.column_name;
+
+# In some databases LEFT JOIN is called LEFT OUTER JOIN.
