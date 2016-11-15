@@ -1,0 +1,54 @@
+# Auto-increment allows a unique number to be generated when a new record is inserted into a table.
+# Very often we would like the value of the primary key field to be created automatically every time a new record is inserted.
+
+# Syntax for MySQL
+#The following SQL statement defines the "ID" column to be an auto-increment primary key field in the "Employee" table:
+
+CREATE TABLE Employee
+(
+ID int NOT NULL AUTO_INCREMENT,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+PRIMARY KEY (ID)
+)
+
+# Syntax for SQL Server
+#The following SQL statement defines the "ID" column to be an auto-increment primary key field in the "Employee" table:
+
+CREATE TABLE Employee
+(
+ID int IDENTITY(1,1) PRIMARY KEY,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+
+# Syntax for Access
+#The following SQL statement defines the "ID" column to be an auto-increment primary key field in the "Employee" table:
+
+CREATE TABLE Employee
+(
+ID Integer PRIMARY KEY AUTOINCREMENT,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+
+# Syntax for Oracle
+# In Oracle the code is a little bit more tricky.
+# You will have to create an auto-increment field with the sequence object (this object generates a number sequence).
+# Use the following CREATE SEQUENCE syntax:
+
+CREATE SEQUENCE seq_employee
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10
+
+# The code above creates a sequence object called seq_employee, that starts with 1 and will increment by 1. 
+# It will also cache up to 10 values for performance. The cache option specifies how many sequence values will be stored in memory 
+  for faster access.
