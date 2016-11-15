@@ -22,6 +22,5 @@ ul.b {list-style-position:outside;}
   <li>Coca Cola</li>
 </ul>
 
-<p>"list-style-position: outside" is the default setting.</p>
 </body>
 </html>
