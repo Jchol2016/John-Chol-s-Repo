@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="action_page.db_name">
+  <select name="cars">
+    <option value="BMW">BMW</option>
+    <option value="Audi">Audi</option>
+    <option value="Toyota">Toyota</option>
+    <option value="Ford">Ford</option>
+    <option value="GMC">GMC</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html>
