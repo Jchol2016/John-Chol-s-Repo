@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.hometown { 
+    background: lightgreen;
+}
+</style>
+</head>
+<body>
+
+<p>Our names are McDonald and Wendy.</p>
+<p class="hometown">We live in United States.</p>
+<p class="hometown">We also live in Africa.</p>
+
+</body>
+</html>
