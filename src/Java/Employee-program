@@ -1,0 +1,49 @@
+
+public class Employee{
+
+   String name;
+   int age;
+   String Title;
+   double salary;
+	
+   // This is the constructor of the class Employee
+   public Employee(String name){
+      this.name = name;
+   }
+   // Assign the age of the Employee  to the variable age.
+   public void empAge(int empAge){
+      age =  empAge;
+   }
+   /* Assign the designation to the variable designation.*/
+   public void empTitle(String empTitle){
+      Title = empTitle;
+   }
+   /* Assign the salary to the variable	salary.*/
+   public void empSalary(double empSalary){
+      salary = empSalary;
+   }
+   /* Print the Employee details */
+   public void printEmployee(){
+      System.out.println("Name:"+ name );
+      System.out.println("Age:" + age );
+      System.out.println("Title:" + Title );
+      System.out.println("Salary:" + salary);
+   }
+   
+   public static void main(String args[]){
+	      /* Create two objects using constructor */
+	      Employee empOne = new Employee("John Smith");
+	      Employee empTwo = new Employee("Joe Dirt");
+
+	      // Invoking methods for each object created
+	      empOne.empAge(26);
+	      empOne.empTitle("Senior Software Engineer");
+	      empOne.empSalary(5000);
+	      empOne.printEmployee();
+
+	      empTwo.empAge(21);
+	      empTwo.empTitle("Junior Software Engineer");
+	      empTwo.empSalary(4000);
+	      empTwo.printEmployee();
+	   }
+}
