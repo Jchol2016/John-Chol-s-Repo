@@ -21,15 +21,15 @@ table, td, th {
     <th>Lastname</th>
   </tr>
   <tr>
-    <td>Jeff</td>
+    <td>Joe</td>
     <td>Isaac</td>
   </tr>
   <tr>
-    <td>Louis</td>
-    <td>Van</td>
+    <td>Lewis</td>
+    <td>Gary</td>
   </tr>
   <tr>
-    <td>Danny</td>
+    <td>Dan</td>
     <td>Togo</td>
   </tr>
 </table>
