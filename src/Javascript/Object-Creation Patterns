@@ -4,18 +4,18 @@
 FACTORY PATTERN
 ==================
 
-var peopleFactory = function(name, age, state){
+var employeeFactory = function(name, title, DepNo, city){
   
   var temp = {};
   
   temp.name = name;
-  temp.age = age;
+  temp.title = title;
+  temp.DepNo = DepNo;
   temp.city = city;
-  temp.state = state;
 
-  temp.printPerson = function(){
+  temp.printEmployee = function(){
 
-    console.log(this.name + ", " +this.age +", " + this.city + ", " + this.state);
+    console.log(this.name + ", " +this.title +", " + this.DepNo + ", " + this.city);
 
 
   };
@@ -24,11 +24,11 @@ var peopleFactory = function(name, age, state){
 
 };
 
-var person1 = peopleFactory("John Smith", 30, "Kansas City", "MO");
-var person2 = peopleFactory("Joe Dirt", 35, "Dallas", "Texas");
+var employee1 = employeeFactory("John Smith", "IT Support", "IT Support Dept", "Kansas City");
+var employee2 = employeeFactory("Joe Dirt", "Developer", "Software Development", "Dallas");
 
-person1.printPerson();
-person2.printPerson();
+employee1.printEmployee();
+employee2.printEmployee();
 
 
 
@@ -36,53 +36,53 @@ person2.printPerson();
  CONSTRUCTOR PATTERN
 ======================
 
-var peopleConstructor = function(name, age, state){
+var employeeConstructor = function(name, title, DepNo, city){
 
    this.name = name;
-   this.age = age;
+   this.title = title;
+   this.DepNo = DepNo;
    this.city = city;
-   this.state = state;
 
-   this.printPerson = function(){
+   this.printEmployee = function(){
     
-     console.log(this.name +", " + this.age + ", " + this.city + ", " + this.state)
+     console.log(this.name +", " + this.title + ", " + this.DepNo + ", " + this.city)
  
   };
 
 }; 
 
-var person1 = new peopleConstructor("John Smith", 30, "Kansas City", "MO");
-var person2 = new peopleConstructor("Joe Dirt", 35, "Dallas", "Texas");
+var employee1 = employeeConstructor("John Smith", "IT Support", "IT Support Dept", "Kansas City");
+var employee2 = employeeConstructor("Joe Dirt", "Developer", "Software Development", "Dallas");
 
-person1.printPerson();
-person2.printPerson();
+employee1.printEmployee();
+employee2.printEmployee();
 
 
 ====================
 PROTOTYPE PATERN
 ====================
 
-var peopleProto = function(){
+var employeePrototype = function(){
 
 };
 
-  peopleProto.prototype.name = "no name";
-  peopleProto.prototype.age = 0;
-  peopleProto.prototype.city = "no city";
-  peopleProto.prototype.state = "no state";
+  employeePrototype.prototype.name = "no name";
+  employeePrototype.prototype.title = "no title";
+  employeePrototype.prototype.DepNo = "no DepNo";
+  employeePrototype.prototype.city = "no city";
 
-  peopleProto.prototype.printPerson = function(){
+  employeePrototype.prototype.printEmployee = function(){
    
-     console.log(this.name + ", " + this.age + ", " + this.city + ", " + this.state);
+     console.log(this.name + ", " + this.title + ", " + this.DepNo + ", " + this.city);
 };
 
-var person1 = new peopleProto();
-  person1.name = "John Smith";
-  person1.age = 30;
-  person1.city = "Kansas City";
-  person1.state = "MO";
+var employee1 = new employeePrototype();
+  employee1.name = "John Smith";
+  employee1.title = "Developer";
+  employee1.DepNo = "Software Development";
+  employee1.city = "Kansas City";
 
-  person1.printPerson();
+  person1.printEmployee();
 
 
 
@@ -90,20 +90,20 @@ var person1 = new peopleProto();
 DYNAMIC PROTOTYPE
 ===================
 
-var peopleDynamicProto = function(){
+var employeeDynamicPrototype = function(){
 
   this.name = name;
-  this.age = age;
+  this.title = title;
+  this.DepNo = DepNo;
   this.city = city;
-  this.state = state;
 
-  if(typeof this.printPerson!== 'function'){
-     peopleDynamicProto.prototype.printPerson = function(){
-        console.log(this.name + ", " + this.age + ", " + this.city + ", " + this.state);
+  if(typeof this.printEmployee!== 'function'){
+     employeeDynamicPrototype.prototype.printEmployee = function(){
+        console.log(this.name + ", " + this.title + ", " + this.DepNo + ", " + this.city);
     };
   };
 
-var person1 = new peopleDynamicProto("John Smith", 30, "Kansas City", "MO");
+var employee1 = new employeeDynamicPrototype("John Smith", "Developer", "Software Development", "Kansas City");
    
- person1.printPerson();
+ employee1.printEmployee();
 
