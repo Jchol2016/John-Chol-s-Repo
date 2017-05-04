@@ -1,1 +1,26 @@
 
+package WebDriverTests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.webDriver;
+import org.openqa.selenium.webElement;
+import org.openqa.selenium.firefox.FireFoxDriver;
+
+public class WedDriverTest1 {
+   public static void main(String[] args) throws InterruptedEception {
+      
+      WebDriver driver = new firefoxDriver();
+      driver.get(www.bing.com);
+      webElement link;
+      link = driver.findElement(By.linkTest("English"));
+      link.click();
+      Thread.sleep(3600);
+      webElement searchBox;
+      searchBox = driver.findElement(By.id("searchInput"));
+      searchBox.sendKeys("JavaScript");
+      searchBox.submit();
+      Thread.sleep(3600);
+      driver.quit();
+    }
+
+}
