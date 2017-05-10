@@ -1,5 +1,5 @@
 package multithreading.pattern;
-//Java Program example with Synchronized
+//Example of Synchronization in Java program
  
 class PrintDemo {
 	   public void printCount(){
