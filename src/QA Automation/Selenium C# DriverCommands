@@ -11,7 +11,7 @@ using OpenQA.Selenium.Firefox;
         {
             IWebDriver driver = new FirefoxDriver();
 
-            //Launch the ToolsQA Website
+            //Launch the Google Website
             driver.Url = "https://www.google.com";
 
             // Storing Title name in String variable
@@ -47,7 +47,7 @@ using OpenQA.Selenium.Firefox;
             // Printing Page Source on console
             Console.WriteLine("Page Source of the page is : " + PageSource);
 
-            // Printing Page SOurce length on console
+            // Printing Page Source length on console
             Console.WriteLine("Length of the Page Source is : " + PageSourceLength);
 
             //Closing browser
