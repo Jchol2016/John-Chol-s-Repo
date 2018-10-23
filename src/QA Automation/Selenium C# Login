@@ -1,0 +1,67 @@
+using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Employees.Page
+{
+    
+    public class LoginPage : EmployeesLoginPage
+    {
+
+        public LoginPage(BaseWebDriver webDriver) => this.webDriver = webDriver;
+
+        /// Returns userName field.
+        /// <returns>IWebElement userName field</returns>
+        public IWebElement GetUserNameField()
+        {
+            element = webDriver.WaitForElementClickable(By.Id("Username"));
+            return element;
+        }
+
+        /// Returns password field.
+        /// <returns>IWebElement password field</returns>
+        public IWebElement GetPasswordField()
+        {
+            element = webDriver.WaitForElementClickable(By.Id("Password"));
+            return element;
+        }
+
+        /// Returns LOG IN button.
+        /// <returns>IWebElement LOG IN button</returns>
+        public IWebElement GetLogInButton()
+        {
+            element = webDriver.WaitForElementClickable(By.XPath("//input[@type='submit']"));
+            return element;
+        }
+
+        /// Test to see if the Password Exporation Warning message 
+        /// is being presented
+        /// <returns>Boolean true if the message is displayed, otherwise false</returns>
+        public Boolean IsPasswordExpirationWarning()
+        {
+            try
+            {
+                GetPasswordExpirationWarningCloseElement();
+                return true;
+            } 
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        
+        /// Get Password Expiration Warning Close Element.
+        /// <returns>IWebElement Password Expiration Warning Close Element</returns>
+        public IWebElement GetPasswordExpirationWarningCloseElement()
+        {
+            // Wait 5 seconds for element
+            element = webDriver.WaitForElementClickable(By.XPath("/html/body/div[2]/div[1]/a/span"), 5);
+            return element;
+        }
+
+
+    }
+}
