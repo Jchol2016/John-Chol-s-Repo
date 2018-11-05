@@ -4,7 +4,7 @@
       <script type="text/javascript">
          <!--
             var grade='A';
-            document.write("Switch Statement Block<br />");
+            document.write("Entering Switch Statement<br />");
             switch (grade)
             {
                case 'A': document.write("Passing with with grade of A<br />");
