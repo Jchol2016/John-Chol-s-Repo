@@ -1,5 +1,6 @@
 <html>
    <body>
+      
       <script type="text/javascript">
          <!--
             var grade='A';
@@ -7,21 +8,11 @@
             switch (grade)
             {
                case 'A': document.write("Passing with with grade of A<br />");
-               break;
-            
                case 'B': document.write("Passing with with grade of B<br />");
-               break;
-            
                case 'C': document.write("Passing with with grade of C<br />");
-               break;
-            
-               case 'D': document.write("Not good passing grade<br />");
-               break;
-            
+               case 'D': document.write("Not so good<br />");
                case 'F': document.write("Failed the exam<br />");
-               break;
-            
-               default:  document.write("Unknown grade<br />")
+               default: document.write("Unknown grade<br />")
             }
             document.write("Exiting switch block");
          //-->
